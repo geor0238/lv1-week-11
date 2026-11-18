@@ -163,3 +163,29 @@ section.three div:nth-child(5){
     grid-column end: span 2; */
 }
 
+/* -------------------------------------------
+              GRID MAPPING
+------------------------------------------- */
+
+section.four article{
+    display: grid;
+
+    /* this draws a map of different areas you can use in your grid */
+    grid-template-areas:
+    "nav cart"
+    "header header"
+    "main main"
+    "photo1 photo2"
+    "aside aside"
+    "footer footer";
+}
+
+/* then you can tell each element which area it should use */
+section.four div:nth-child(1){ grid-area: nav; }
+section.four div:nth-child(2){ grid-area: cart; }
+section.four div:nth-child(3){ grid-area: header; }
+section.four div:nth-child(4){ grid-area: main; }
+section.four div:nth-child(5){ grid-area: photo1; }
+section.four div:nth-child(6){ grid-area: photo2; }
+section.four div:nth-child(7){ grid-area: aside; }
+section.four div:nth-child(8){ grid-area: footer; }
