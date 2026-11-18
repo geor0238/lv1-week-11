@@ -178,6 +178,8 @@ section.four article{
     "photo1 photo2"
     "aside aside"
     "footer footer";
+
+    grid-auto-rows: 120px;
 }
 
 /* then you can tell each element which area it should use */
@@ -189,3 +191,29 @@ section.four div:nth-child(5){ grid-area: photo1; }
 section.four div:nth-child(6){ grid-area: photo2; }
 section.four div:nth-child(7){ grid-area: aside; }
 section.four div:nth-child(8){ grid-area: footer; }
+
+@media screen and (min-width:720px){
+    /* when we want to change the site for a bigger screen, all we do is change the map */
+
+    section.four article{
+    grid-template-areas:
+    "nav nav cart"
+    "header header header"
+    "main main aside"
+    "photo1 photo2 aside"
+    "footer footer footer";
+    }
+}
+
+@media screen and (min-width:900px){
+
+    section.four article{
+    grid-template-areas:
+    "nav nav nav cart"
+    "header header header header"
+    "photo1 main main aside"
+    "photo2 main main aside"
+    "footer footer footer aside";
+    }
+}
+
