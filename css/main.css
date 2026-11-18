@@ -55,7 +55,7 @@ table {
 h1{
     font-size: 36px;
     font-weight: bold;
-    background-color: rgb(197, 202, 226);
+    background-color: rgb(172, 199, 235);
     text-align: center;
     padding: 10px;
     margin-bottom: 20px;
@@ -74,5 +74,22 @@ article div{
     font-size: 32px;
     font-weight: bold;
     background-color: rgb(231, 239, 250);
-    border: 2px solid rgb(113, 138, 190);
+    border: 2px solid rgb(132, 152, 195);
+}
+
+/* -------------------------------------------
+              GRID STYLES
+------------------------------------------- */
+
+/* no space means section with the class of one */
+section.one article{
+    /* like display flex, you need to have a grid container with display:grid */
+    display: grid;
+
+    /* tell the grid how many columns it should have
+fr stands for fraction, it means use a part of the available space */
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /* you can also control rows - but in this example, the third row won't have a defined height */
+    grid-template-rows: 120px 120px;
 }
