@@ -75,7 +75,13 @@ article div{
     font-weight: bold;
     background-color: rgb(231, 239, 250);
     border: 2px solid rgb(132, 152, 195);
+
+    /* you can add flexbox inside of a grif (or grid inside of a flexbox) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 /* -------------------------------------------
               GRID STYLES
@@ -88,8 +94,45 @@ section.one article{
 
     /* tell the grid how many columns it should have
 fr stands for fraction, it means use a part of the available space */
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 200px 1fr 1fr;
 
     /* you can also control rows - but in this example, the third row won't have a defined height */
     grid-template-rows: 120px 120px;
+}
+
+section.two article{
+    display: grid;
+
+    /* with grid, you can have an explicit grid (what you define) and an implicit grid (what the browser automatically fills out) */
+    grid-template-columns: repeat(4, 1fr);
+
+    /* for rows, you can tell each row to automatically take on a property, no matter how many */
+    grid-auto-rows: 120px;
+
+    /* tell the grid to automatically fill spaces left by elements that were too big */
+    grid-auto-flow: dense;
+}
+
+section.two div:nth-child(1){
+    /* you csn tell a cell to start and end at a row or column */
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+section.two div:nth-child(2){
+    grid-column-start: 2;
+    grid-column-end: 5;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+section.two div:nth-child(6){
+    grid-column-start: 1;
+
+    /* you can use span to tell it to stretch across a specific number of columns */
+    grid-column-end: span 4;
 }
