@@ -48,6 +48,31 @@ table {
 }
 
 
-/* ----------------------------------------------------------------- */
+/* -------------------------------------------
+              DEFAULT STYLES
+------------------------------------------- */
 
+h1{
+    font-size: 36px;
+    font-weight: bold;
+    background-color: rgb(197, 202, 226);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
 
+h2{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid rgb(43, 37, 126);
+    margin-bottom: 10px;
+}
+
+article div{
+    font-size: 32px;
+    font-weight: bold;
+    background-color: rgb(231, 239, 250);
+    border: 2px solid rgb(113, 138, 190);
+}
